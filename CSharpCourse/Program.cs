@@ -1,4 +1,6 @@
-п»їusing System;
+using System;
+using System.Data;
+using System.Formats.Asn1;
 using System.Text;
 
 namespace CSharpCourse
@@ -6,7 +8,167 @@ namespace CSharpCourse
     class Program
     {
         static void Main(string[] args)
-        {
+        {   
+        }
+        // HomeWork - C# Basic
+        static void HomeWork_Profile(){
+            System.Console.WriteLine("Please enter your surname:");
+            string surname = Console.ReadLine();
+            System.Console.WriteLine("Please enter your name:");
+            string name = Console.ReadLine();
+            System.Console.WriteLine("Please enter your age:");
+            int age = int.Parse(Console.ReadLine());
+            System.Console.WriteLine("Please enter your weight (kg):");
+            double weight = double.Parse(Console.ReadLine());
+            System.Console.WriteLine("Please enter your height (m):");
+            double height = double.Parse(Console.ReadLine());
+            double imt = weight/(height*height);
+            System.Console.WriteLine($"Your profil:\nFull name: {surname},{name}\nAge: {age}\nWeight: {weight}\nHeight: {height}\nBody Mass Index: {imt}");
+        }
+        static void HomeworkGeron(){
+            // Geron task (4)
+            System.Console.WriteLine("Please enter first side of a triangle (sm) :");
+            string input_a = Console.ReadLine();
+            System.Console.WriteLine("Please enter second side of a triangle (sm) :");
+            string input_b = Console.ReadLine();
+            System.Console.WriteLine("Please enter third side of a triangle (sm) :");
+            string input_c = Console.ReadLine();
+            double a = double.Parse(input_a);
+            double b = double.Parse(input_b);
+            double c = double.Parse(input_c);
+            double p1 = a+b+c;
+            double p = p1/2;
+            double result = Math.Sqrt(p*(p-a)*(p-b)*(p-c));
+            System.Console.WriteLine($"Result: {result}");
+        }
+        static void HomeWork1_3(){
+            // 1 task
+            System.Console.WriteLine("Please enter your name:");
+            string name = Console.ReadLine();
+            System.Console.WriteLine($"Your name is {name}");
+            // 2 task
+            System.Console.Write("Please enter first number:");
+            string input = Console.ReadLine();
+            int aa = int.Parse(input);
+            System.Console.Write("Please enter second number:");
+            string input1 = Console.ReadLine();
+            int a1 = int.Parse(input1);
+            System.Console.WriteLine($"Your first number is : {aa}");
+            System.Console.WriteLine($"Your second number is : {a1}");
+            // 3 task
+            System.Console.WriteLine("Please enter your number:");
+            string num1 = Console.ReadLine();
+            int n = int.Parse(num1);
+            System.Console.WriteLine($"Number of digits : {num1.Length}"); 
+        }
+        // Lessons С# - Basic
+        static void DataTimeBasic(){
+            DateTime now = DateTime.Now; // текущее время
+            System.Console.WriteLine(now.ToString());
+            System.Console.WriteLine($"It's {now.Date},{now.Hour}:{now.Minute}:{now.Second}");
+            DateTime dt = new DateTime(2016,2, 28);
+            // Арифметика на датах
+            DateTime newdt = dt.AddDays(2);
+            System.Console.WriteLine(newdt);
+            // Длительность таймспен
+            TimeSpan ts = now - dt;
+            // ts = now.Subtract(dt);
+            System.Console.WriteLine(ts.Days);
+        }
+        static void IntroToArray(){
+          int[] a1; // тут обьявляем переменную а1 которая будет хранить массив
+            a1 = new int[10]; // new int[10] - фактическое создание массива,[10] - выделяем память под масив
+
+            int[] a2 = new int[5];
+
+            int[] a3 = new int[5] {1,2,-1,5,10}; // синтаксис записи
+
+            int[] a4 = {1,3,2,4,5}; // т.е самій краткий синтаксис
+            System.Console.WriteLine(a4[0]);
+            int number = a4[4];
+            
+            System.Console.WriteLine(number);
+            a4[4] = 6;
+            System.Console.WriteLine(a4[4]);
+
+            Console.WriteLine(a4.Length); // вывод длинны массива
+            Console.WriteLine(a4[a4.Length - 1]); // вывод последнего елемента массива
+
+            string s1 = "abcdefg";
+            char first = s1[0];
+            char last = s1[s1.Length - 1];
+
+            System.Console.WriteLine($"first {first} and last {last}");
+
+            // impossible:
+            // s1[0] = 'z';
+        }
+        static void MathDemo(){
+            // Math.E and Pi - const
+            // Math.BigMul();  перемножает 2 инт и дает результат в лонг
+            System.Console.WriteLine(Math.Pow(2,3)); // 2 число,3 - степень
+            System.Console.WriteLine(Math.Sqrt(9)); // квадратный корень (double)
+            System.Console.WriteLine(Math.Sqrt(8));
+            System.Console.WriteLine(Math.Round(1.7)); // округление
+            System.Console.WriteLine(Math.Round(1.4)); 
+            System.Console.WriteLine(Math.Round(1.5));
+            System.Console.WriteLine(Math.Round(2.5, MidpointRounding.AwayFromZero));
+            System.Console.WriteLine(Math.Round(2.5,MidpointRounding.ToEven));
+            // AwayFromZero - ближайщее чсило которое отдаленное от нуля
+            // ToEven - к ближайщему четному числу
+        }
+        static void Comments(){
+          // singel line comment
+            /*
+            123
+            Multi-line comment
+            We can write here many 
+            */
+        }
+        static void CastingAndParsing(){
+            // Приведение типов
+            byte b = 3; // 0000 0011 - binary form
+            int i = b; // 0000 0000 0000 0000 0000 0000 0000 0011 - binary form
+            long l = i; // 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0011 - binary form
+            
+            float f = i; // 3.0
+            // byte a = i; // будет предупреждение что число может не влезть в байт и будет ругаться компилятор
+            // что-бы решить данную проблему юзаем так:
+            b = (byte)i; // т.е указываем что мы знает про предупреждение (явное приведение)
+            i = (int)f; // приводим флоат к инту т.е говорим что будет целое число без точки
+            f = 3.1f;
+            i = (int)f; // всё что после запятой теряем т.е будет выводиться 3
+
+            // Конвертация строк в инт
+            string str = "1";
+            // i = (int)str; - error
+            i = int.Parse(str);
+            // System.Console.WriteLine($"Parsed i = {i}");
+
+            int x = 5;
+            int result = x/2;
+            System.Console.WriteLine(result); // отсекает при выводе все что после точки
+            double res2 = (double)x/2; // явно указываем что бедем значение после точки т.е приведение типов
+            System.Console.WriteLine(res2);
+        }
+        static void ConsoleBasics(){
+            // System.Console.WriteLine("Hi,please tell me your name:");
+            // string name = Console.ReadLine(); // ввод информации от пользователя на новом рядке
+            // string sentence = $"Your name is {name}";
+            // System.Console.WriteLine(sentence);
+
+            System.Console.WriteLine("Please enter your age: ");
+            string input = Console.ReadLine();
+            int age = int.Parse(input); // преобразование стринга в инт с помошью функции Parse
+            string sentence = $"Your age = {age}";
+            System.Console.WriteLine(sentence);
+
+            // Console.Clear(); // очистка консоли
+            // Console.BackgroundColor = ConsoleColor.Cyan; // цвет консоли
+            // Console.ForegroundColor = ConsoleColor.DarkMagenta; // цвет шрифта
+
+            // Console.Write("New style :");
+            // Console.WriteLine("123");
         }
         static void ComparingString(){
         // string str1 = "abcde";
@@ -15,31 +177,31 @@ namespace CSharpCourse
             // System.Console.WriteLine(areEqual);
             // areEqual = string.Equals(str1,str2,StringComparison.Ordinal);
             // System.Console.WriteLine(areEqual);
-            // // Ordinal == bool areEqual = str1 == str2; // С‚.Рµ РµРґРµРЅС‚РёС‡РЅС‹Рµ СЃСЂР°РІРЅРµРЅРёСЏ
+            // // Ordinal == bool areEqual = str1 == str2; // т.е едентичные сравнения
 
             string str1 = "Strasse";
-            string str2 = "StraГџe"; // РЅР° РЅРµРјРµС†РєРѕРј СЏР·С‹РєРµ С‚РѕС‡РЅРѕ С‚Р°РєРѕРµ Р¶Рµ СЃР»РѕРІРѕ
-            bool areEqual = string.Equals(str1,str2,StringComparison.Ordinal); // СЃСЂР°РІРЅРёРІР°РµС‚ Р±Р°Р№С‚РѕРІС‹Рµ СЂРµРїСЂРµР·РёРЅС‚Р°С†РёРё
+            string str2 = "Stra?e"; // на немецком языке точно такое же слово
+            bool areEqual = string.Equals(str1,str2,StringComparison.Ordinal); // сравнивает байтовые репрезинтации
             System.Console.WriteLine(areEqual);
-            areEqual = string.Equals(str1,str2,StringComparison.InvariantCulture); // РїРѕРЅРёРјР°РµС‚ Р»РёРЅРі.РїСЂР°РІРёР»Р° Рё СЂР°СЃС€РёСЂРµРЅРёСЏ
-            // Рё РІС‹РІРѕРґРёС‚ РјРѕР¶РµС‚ Гџ - СЂР°СЃС€РёС„СЂРѕРІР°С‚СЊ СЌС‚РѕС‚ СЃРёРјРІРѕР» Рё РїРѕР»СѓС‡РёС‚СЊ Р·РЅР°С‡РµРЅРёРµ - Р±СѓРґРµС‚ True
+            areEqual = string.Equals(str1,str2,StringComparison.InvariantCulture); // понимает линг.правила и расширения
+            // и выводит может ? - расшифровать этот символ и получить значение - будет True
             System.Console.WriteLine(areEqual);
-            areEqual = string.Equals(str1,str2,StringComparison.CurrentCulture); // СѓС‡РёС‚С‹РІР°РµС‚ СЃРїРµС†РёС„РёРєСѓ Р°Р»С„Р°РІРёС‚Р° (Р•СЃР»Рё РµСЃС‚СЊ РЅР° РћРЎ)
+            areEqual = string.Equals(str1,str2,StringComparison.CurrentCulture); // учитывает специфику алфавита (Если есть на ОС)
             System.Console.WriteLine(areEqual);
         }
         static void StringFormat(){
         string name = "John";
             int age = 30;
             string str1 = string.Format("My name is {0} and I'm {1}",name,age);
-            // РЎС‡РёС‚Р°Р№С‚Рµ РїРѕСЃР»Рµ С‚РµРєСЃС‚Р° СЃ Р·Р°РїСЏС‚РѕР№ РЅР°С‡РёРЅР°СЋС‚СЃСЏ РїРµСЂРµРјРµРЅРЅС‹Рµ РїРѕ РёРЅРґРµРєСЃР°Рј
-            // С‚.Рµ name 0 index,age = 1 inder. In text {index} 
+            // Считайте после текста с запятой начинаются переменные по индексам
+            // т.е name 0 index,age = 1 inder. In text {index} 
             // string str2 = "My name is " + name + "and I'm " + age;
             // System.Console.WriteLine(str2);
-            string str2 = $"My name is {name} and i'm {age}"; // $ - РІРјРµСЃС‚Рѕ stringFormat
-            // Рё С‚РµРїРµСЂСЊ РІ СЃС‚СЂРёРЅРіС…РѕР»РґРµСЂ РјРѕР¶РµРј РІРІРѕРґРёС‚СЊ РїРµСЂРµРјРµРЅРЅС‹Рµ {name}
-            string str3 = "My name is \nJohn"; // \n - РїРµСЂРµС…РѕРґ РЅР° РЅРѕРІСѓСЋ СЃС‚СЂРѕРєСѓ
+            string str2 = $"My name is {name} and i'm {age}"; // $ - вместо stringFormat
+            // и теперь в стрингхолдер можем вводить переменные {name}
+            string str3 = "My name is \nJohn"; // \n - переход на новую строку
             string str4 = "I'm \t30";
-            str3 = $"My name is {Environment.NewLine}John"; // С‚РѕР¶Рµ СЃР°РјРѕРµ С‡С‚Рѕ Рё \n РЅРѕ РїРѕРґ РІСЃРµ РћРЎ
+            str3 = $"My name is {Environment.NewLine}John"; // тоже самое что и \n но под все ОС
             string str5 = "I'm John and I'm \"good\" programmer";
 
             // string str6 = "C:\\tm\\test_amp";
@@ -48,69 +210,69 @@ namespace CSharpCourse
 
             double answer = 42.08;
             // string result = string.Format("{0:d}", answer);
-            // string result1 = string.Format("{0:d4}",answer);  С‚.Рµ РЅР°С€Рµ С‡РёСЃР»Рѕ РґРѕРїРѕР»РЅСЏРµС‚СЃСЏ РЅСѓР»СЏРјРё
+            // string result1 = string.Format("{0:d4}",answer);  т.е наше число дополняется нулями
 
             string result = string.Format("{0:f}", answer);
-            string result1 = string.Format("{0:f1}",answer); // С‚СѓС‚ Р±СѓРґРµС‚ РѕРєСѓСЂРіР»РµРЅРёРµ Рє Р±РѕР»СЊС€РµРјСѓ
+            string result1 = string.Format("{0:f1}",answer); // тут будет окургление к большему
 
             Console.OutputEncoding = Encoding.UTF8;
             double money = 12.8;
             result = string.Format("{0:C}",money);
-            result1 = string.Format("{0:C2}",money); // РІС‹РІРѕРґ Р·РЅР°РєР° РґРµРЅРµРі (РєРѕС‚РѕСЂС‹Рµ РІ СЃРёСЃС‚РµРјРµ СЃС‚РѕСЏС‚)
-            // result = $"{money:C2}"; - РјРѕР¶РЅРѕ Рё С‚Р°Рє
+            result1 = string.Format("{0:C2}",money); // вывод знака денег (которые в системе стоят)
+            // result = $"{money:C2}"; - можно и так
             Thread.CurrentThread.CurrentCulture = new System.Globalization.CultureInfo("en-US");
-            // РёР·РјРµРЅСЏРµРј РЅР° РґРѕР»Р»Р°СЂС‹
+            // изменяем на доллары
             System.Console.WriteLine(result);
             System.Console.WriteLine(money.ToString("C2"));
         }
         static void StringBuilder(){
-            StringBuilder sb = new StringBuilder(); // Р±РѕР»РµРµ РїСЂРѕРёР·РІРѕРґРёС‚РµР»СЊРЅС‹Р№ РєРѕРіРґР° Р±СѓРґРµС‚ Р±РѕР»СЊС€Рµ 7 СЃС‚СЂРѕРє
-            sb.Append("My "); // РґРѕР±Р°РІР»РµРЅРёРµ
+            StringBuilder sb = new StringBuilder(); // более производительный когда будет больше 7 строк
+            sb.Append("My "); // добавление
             sb.Append("name ");
             sb.Append("is ");
             sb.Append("John");
-            sb.AppendLine("|"); // РїРµСЂРµРІРѕРґРёС‚ РЅРµРєСЃС‚ СЃС‚СЂРѕРєСѓ РЅР° РЅРѕРІС‹Р№ СЂСЏРґРѕРє
+            sb.AppendLine("|"); // переводит некст строку на новый рядок
             sb.AppendLine("Hello");
             sb.Append("!");
             System.Console.WriteLine(sb);
         }
         static void StringModification(){
          string nameConcat = string.Concat("My ","name ","is ","John");
-            string nameJoin = string.Join(" ","My","Name","is","John"); // in first " " СѓРєР°Р·С‹РІР°РµРј СЂР°Р·РґРµР»РёС‚РµР»СЊ
+            string nameJoin = string.Join(" ","My","Name","is","John"); // in first " " указываем разделитель
             System.Console.WriteLine(nameConcat);
             System.Console.WriteLine(nameJoin);
-            nameConcat = "My " + "name " + "is " + "John"; // Р°РЅРѕР»РѕРіРёС‡РЅРѕ 1 СЃС‚СЂРѕРєРµ
+            nameConcat = "My " + "name " + "is " + "John"; // анологично 1 строке
             nameConcat = nameConcat.Insert(0,"By the way, "); // 0 is index
             System.Console.WriteLine(nameConcat);
 
-            nameConcat = nameConcat.Remove(0,1); // СѓРґР°Р»РµРЅРёРµ РµР»РµРјРµРЅС‚РѕРІ (РѕС‚ Рё СЃРєРѕР»СЊРєРѕ)
+            nameConcat = nameConcat.Remove(0,1); // удаление елементов (от и сколько)
             System.Console.WriteLine(nameConcat);
 
-            string replaced = nameConcat.Replace('n','z'); // Р·Р°РјРµРЅР° (СЃРёРјРІРѕР»Р° РєР°РєРѕР№ РјРµРЅСЏРµРј,РЅР° С‡С‚Рѕ РјРµРЅСЏРµРј)
+            string replaced = nameConcat.Replace('n','z'); // замена (символа какой меняем,на что меняем)
             System.Console.WriteLine(replaced);
 
             string data = "12;28;21;22;23";
-            string[] splitData = data.Split(';'); // СЂР°Р·РґРµР»РµРЅРёРµ Р·Р° СЃРёРјРІРѕР»РѕРј
+            string[] splitData = data.Split(';'); // разделение за символом
             string first = splitData[0];
             System.Console.WriteLine(first);
 
             char[] chars = nameConcat.ToCharArray();
             System.Console.WriteLine(chars[2]);
-            System.Console.WriteLine(nameConcat[2]); // С‚.Рµ РЅРµ РѕР±РµР·Р°С‚РµР»СЊРЅС‹Р№ РјРµС‚РѕРґ ToCharArray
+            System.Console.WriteLine(nameConcat[2]); // т.е не обезательный метод ToCharArray
 
-            string lower = nameConcat.ToLower(); // РїСЂРµРѕР±СЂР°Р·РѕРІР°РЅРѕ Рє РЅРёР¶РЅРµРјСѓ СЂРµРіРёСЃС‚СЂСѓ
+            string lower = nameConcat.ToLower(); // преобразовано к нижнему регистру
             System.Console.WriteLine(lower);
-            string upper = nameConcat.ToUpper(); // Рє РІРµСЂС…РЅРµРјСѓ СЂРµРіРёСЃС‚СЂСѓ
+            string upper = nameConcat.ToUpper(); // к верхнему регистру
             System.Console.WriteLine(upper);
 
-            string John = " My name is John"; // РѕР±СЂРµР·Р°РµС‚ РІСЃРµ РїСЂРѕР±РµР»С‹ РІ РЅР°С‡Р°Р»Рµ Рё РєРѕРЅС†Рµ
+            string John = " My name is John"; // обрезает все пробелы в начале и конце
             System.Console.WriteLine(John.Trim());
         }
         static void StringEptiness(){
             string empty = ""; // = string empty = string.Empty;
             string whiteSpace = " ";
             string notEmpty = " b";
-            string NullString = null; // С‚.Рµ РѕС‚СЃСѓС‚СЃС‚РІРёРµ РµРєР·РµРјРїР»СЏСЂР°
+            string NullString = null; // т.е отсутствие екземпляра
             System.Console.WriteLine("IsNullorEmpty");
             bool IsNullorEmpty = string.IsNullOrEmpty(NullString);
             System.Console.WriteLine(IsNullorEmpty);
@@ -137,16 +299,16 @@ namespace CSharpCourse
             bool ContainsE = name.Contains('E');
             System.Console.WriteLine(ContainsA);
             System.Console.WriteLine(ContainsE);
-            bool EndSwitchAbra = name.EndsWith("abra"); // РїСЂРѕРІРµСЂРєР° РєРѕРЅС†Р°
+            bool EndSwitchAbra = name.EndsWith("abra"); // проверка конца
             System.Console.WriteLine(EndSwitchAbra);
-            bool StartswitchAbra = name.StartsWith("abra"); // РїСЂРѕРІРµСЂРєР° РЅР°С‡Р°Р»Р°
+            bool StartswitchAbra = name.StartsWith("abra"); // проверка начала
             System.Console.WriteLine(StartswitchAbra);
-            int indexof = name.IndexOf('a'); // РїРѕРёСЃРє РїРµСЂРІРѕРіРѕ РёРЅРґРµРєСЃР° Р±СѓРєРІС‹
-            // ('a',1) - РјРѕР¶РЅРѕ Р·Р°РґР°С‚СЊ Р·РЅР°С‡РµРЅРёРµ СЃ РєР°РєРѕРіРѕ РёРЅРґРµРєСЃР° РёС‰РµРј
+            int indexof = name.IndexOf('a'); // поиск первого индекса буквы
+            // ('a',1) - можно задать значение с какого индекса ищем
             System.Console.WriteLine(indexof);
-            int Lastindexof = name.LastIndexOf('a'); // РїРѕРёСЃРє РїРѕСЃР»РµРґРЅРµРіРѕ
+            int Lastindexof = name.LastIndexOf('a'); // поиск последнего
             System.Console.WriteLine(Lastindexof);
-            System.Console.WriteLine(name.Length); // РґР»РёРЅР° СЃС‚СЂРѕРєРё
+            System.Console.WriteLine(name.Length); // длина строки
 
             string substrfrom5 = name.Substring(5);
             string substr = name.Substring(0,3);
@@ -160,16 +322,16 @@ namespace CSharpCourse
             System.Console.WriteLine(ContainsA);
             System.Console.WriteLine(ContainsE);
             string abs = string.Concat("a","b","c");
-            // concat РІС‹Р·С‹РІР°РµРј РЅР° СЃР°РјРѕРј С‚РёРїРµ
+            // concat вызываем на самом типе
             System.Console.WriteLine(abs);
             System.Console.WriteLine(int.MinValue);
             int x = 1;
-            string strx = x.ToString(); // РїСЂРµРѕР±СЂР°Р·СѓРµРј РёРЅС‚ РІ СЃС‚СЂРёРЅРі
+            string strx = x.ToString(); // преобразуем инт в стринг
             System.Console.WriteLine(x);
             System.Console.WriteLine(strx);
         }
         static void ComperisonOperation(){
-            // РћРїРµСЂР°С‚РѕСЂС‹ СЃСЂР°РІРЅРµРЅРёСЏ
+            // Операторы сравнения
             int y = 1;
             int x = 2;
             bool areEqual = x == y;
@@ -190,12 +352,12 @@ namespace CSharpCourse
             int k = x-y;
             int a = z + k - y;
 
-            int b = z/2; // РґРµР»РµРЅРёРµ b/=2;
-            int b1 = k*2; // СѓРјРЅРѕР¶РµРЅРёРµ b1*=2;
-            a = 4%2; // РѕСЃС‚Р°С‚РѕРє РґРµР»РµРЅРёСЏ
+            int b = z/2; // деление b/=2;
+            int b1 = k*2; // умножение b1*=2;
+            a = 4%2; // остаток деления
             b = 5%2;}
         static void IncrementDecrementDemo(){
-            // РїСЂРёР±Р°РІР»СЏРµРј 1
+            // прибавляем 1
             int x = 1;
             x = x + 1;
             System.Console.WriteLine(x);
@@ -203,31 +365,31 @@ namespace CSharpCourse
             System.Console.WriteLine(x);
             ++x;
             System.Console.WriteLine(x);
-            // РѕС‚РЅРёРјР°РµРј 1
+            // отнимаем 1
             x = x-1;
             x--;
             --x;
             System.Console.WriteLine($"Last x state is {x}");
-            // Р Р°Р·РЅРёС†Р° РјРµР¶РґСѓ РїРѕСЃС‚С„РёРєСЃРЅС‹Рј РёРЅРєСЂРµРјРµРЅС‚РѕРј Рё РїСЂРµС„РёРєСЃРЅС‹Рј РёРЅРєСЂРµРјРµРЅС‚РѕРј
+            // Разница между постфиксным инкрементом и префиксным инкрементом
             int j = x++;
             System.Console.WriteLine(j);
             System.Console.WriteLine(x);
             j = ++x;
             System.Console.WriteLine(j);
-            System.Console.WriteLine(x); // РћР±СЊСЏСЃРЅРµРЅРёРµ РІ С„Р°Р№Р»Рµ Р’Р°Р¶РЅРѕ РїРѕРґ РїСѓРЅРєС‚РѕРј 1
+            System.Console.WriteLine(x); // Обьяснение в файле Важно под пунктом 1
             System.Console.WriteLine();
-            // Р”СЂСѓРіРёРµ РѕРїРµСЂР°С†РёРё
+            // Другие операции
             x += 2; // x = x += 2;
             j -= 3; // j = j - 3;
             System.Console.WriteLine(x);
             System.Console.WriteLine(j);}
         static void OverFlow(){
-            checked{ // С‚.Рµ С‚РµРїРµСЂСЊ РїРµСЂРµРїРѕР»РЅРµРЅРёРµ Р±СѓРґРµС‚ РѕС€РёР±РєРѕР№.Р‘Р»РѕРє С‡РµРєРґ
+            checked{ // т.е теперь переполнение будет ошибкой.Блок чекд
             uint x = uint.MaxValue;
             System.Console.WriteLine(x);
             x = x+1;
-            System.Console.WriteLine(x); // Р•СЃР»Рё РјС‹ РїРµСЂРµРІС‹СЃРёРј РјР°РєСЃ Р·РЅР°С‡РµРЅРёРµ - РјС‹ РїРµСЂРµС…РѕРґРёРј Рє РЅР°С‡Р°Р»Сѓ (С‚.Рµ Сѓ РЅР°СЃ Рє 0)
-            // РµСЃР»Рё РїРёСЃР°С‚СЊ Р±РµР· С‡РµРєР°
+            System.Console.WriteLine(x); // Если мы перевысим макс значение - мы переходим к началу (т.е у нас к 0)
+            // если писать без чека
             x = x-1;
             System.Console.WriteLine(x);}
         }
@@ -243,14 +405,14 @@ namespace CSharpCourse
                 }
                 System.Console.WriteLine(a);
                 System.Console.WriteLine(b);
-                // System.Console.WriteLine(c); - РІ РґР°РЅРЅРѕРј РєРѕРЅС‚РµРєСЃС‚Рµ РѕС‚СЃСѓС‚СЃС‚РІСѓРµС‚ РЎ            
+                // System.Console.WriteLine(c); - в данном контексте отсутствует С            
                 }
                 System.Console.WriteLine(a);
-            // System.Console.WriteLine(b); РЅРµ РёРјРµРµРј РґРѕСЃС‚СѓРїР° Рє Р± Рё СЃ
+            // System.Console.WriteLine(b); не имеем доступа к б и с
             // System.Console.WriteLine(c);
         }
         static void Literals(){
-            int x = 0b11; // С‡РёСЃР»Рѕ РїСЂРµРґСЃС‚ РІ Р±РёРЅР°СЂРЅРѕРј РІРёРґРµ
+            int x = 0b11; // число предст в бинарном виде
             int y = 0b1001;
             int k = 0b10001001;
             int m = 0b000_1001;
@@ -259,7 +421,7 @@ namespace CSharpCourse
             System.Console.WriteLine(k);
             System.Console.WriteLine(m);
             System.Console.WriteLine();
-            x = 0x1f; // 16-С‚Рё РјРµСЂРЅС‹Рµ Р»РёС‚РµСЂР°Р»С‹
+            x = 0x1f; // 16-ти мерные литералы
             y = 0xff0D;
             k = 0x1FAB30EF;
             m = 0x1FAB_30EF;
@@ -269,13 +431,13 @@ namespace CSharpCourse
             System.Console.WriteLine(m);
             System.Console.WriteLine();
 
-            System.Console.WriteLine(4.5e2); // С‚РѕР¶Рµ СЃР°РјРѕРµ С‡С‚Рѕ 4.5 СѓРјРЅ РЅР° 10 РІ РєРІР°РґСЂР°С‚Рµ
-            System.Console.WriteLine(3.1E-1); // 3.1 СѓРјРЅ РЅР° 10 РІ -1 СЃС‚РµРїРµРЅРё
+            System.Console.WriteLine(4.5e2); // тоже самое что 4.5 умн на 10 в квадрате
+            System.Console.WriteLine(3.1E-1); // 3.1 умн на 10 в -1 степени
             System.Console.WriteLine();
-            System.Console.WriteLine('\x78'); // РјР°Р»РµРЅСЊРєР°СЏ С… (С‡РµСЂРµР· СЋРЅРёРєРѕРґ)
-            System.Console.WriteLine('\x5A'); //  Z Р±РѕР»СЊС€РѕРµ
-            System.Console.WriteLine('\u0420'); // РџРё
-            System.Console.WriteLine('\u0421'); // РЎРё
+            System.Console.WriteLine('\x78'); // маленькая х (через юникод)
+            System.Console.WriteLine('\x5A'); //  Z большое
+            System.Console.WriteLine('\u0420'); // Пи
+            System.Console.WriteLine('\u0421'); // Си
         }
     }
 }
