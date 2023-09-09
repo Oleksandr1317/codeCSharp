@@ -1,0 +1,28 @@
+D:\HomeWork C#\HomeWorkCSharp\obj\Debug\net7.0\HomeWorkCSharp.GeneratedMSBuildEditorConfig.editorconfig
+D:\HomeWork C#\HomeWorkCSharp\obj\Debug\net7.0\HomeWorkCSharp.AssemblyInfoInputs.cache
+D:\HomeWork C#\HomeWorkCSharp\obj\Debug\net7.0\HomeWorkCSharp.AssemblyInfo.cs
+D:\HomeWork C#\HomeWorkCSharp\obj\Debug\net7.0\HomeWorkCSharp.csproj.CoreCompileInputs.cache
+D:\HomeWork C#\HomeWorkCSharp\bin\Debug\net7.0\HomeWorkCSharp.exe
+D:\HomeWork C#\HomeWorkCSharp\bin\Debug\net7.0\HomeWorkCSharp.deps.json
+D:\HomeWork C#\HomeWorkCSharp\bin\Debug\net7.0\HomeWorkCSharp.runtimeconfig.json
+D:\HomeWork C#\HomeWorkCSharp\bin\Debug\net7.0\HomeWorkCSharp.dll
+D:\HomeWork C#\HomeWorkCSharp\bin\Debug\net7.0\HomeWorkCSharp.pdb
+D:\HomeWork C#\HomeWorkCSharp\obj\Debug\net7.0\HomeWorkCSharp.dll
+D:\HomeWork C#\HomeWorkCSharp\obj\Debug\net7.0\refint\HomeWorkCSharp.dll
+D:\HomeWork C#\HomeWorkCSharp\obj\Debug\net7.0\HomeWorkCSharp.pdb
+D:\HomeWork C#\HomeWorkCSharp\obj\Debug\net7.0\HomeWorkCSharp.genruntimeconfig.cache
+D:\HomeWork C#\HomeWorkCSharp\obj\Debug\net7.0\ref\HomeWorkCSharp.dll
+D:\project\HomeWork\HomeWorkCSharp\bin\Debug\net7.0\HomeWorkCSharp.exe
+D:\project\HomeWork\HomeWorkCSharp\bin\Debug\net7.0\HomeWorkCSharp.deps.json
+D:\project\HomeWork\HomeWorkCSharp\bin\Debug\net7.0\HomeWorkCSharp.runtimeconfig.json
+D:\project\HomeWork\HomeWorkCSharp\bin\Debug\net7.0\HomeWorkCSharp.dll
+D:\project\HomeWork\HomeWorkCSharp\bin\Debug\net7.0\HomeWorkCSharp.pdb
+D:\project\HomeWork\HomeWorkCSharp\obj\Debug\net7.0\HomeWorkCSharp.GeneratedMSBuildEditorConfig.editorconfig
+D:\project\HomeWork\HomeWorkCSharp\obj\Debug\net7.0\HomeWorkCSharp.AssemblyInfoInputs.cache
+D:\project\HomeWork\HomeWorkCSharp\obj\Debug\net7.0\HomeWorkCSharp.AssemblyInfo.cs
+D:\project\HomeWork\HomeWorkCSharp\obj\Debug\net7.0\HomeWorkCSharp.csproj.CoreCompileInputs.cache
+D:\project\HomeWork\HomeWorkCSharp\obj\Debug\net7.0\HomeWorkCSharp.dll
+D:\project\HomeWork\HomeWorkCSharp\obj\Debug\net7.0\refint\HomeWorkCSharp.dll
+D:\project\HomeWork\HomeWorkCSharp\obj\Debug\net7.0\HomeWorkCSharp.pdb
+D:\project\HomeWork\HomeWorkCSharp\obj\Debug\net7.0\HomeWorkCSharp.genruntimeconfig.cache
+D:\project\HomeWork\HomeWorkCSharp\obj\Debug\net7.0\ref\HomeWorkCSharp.dll
