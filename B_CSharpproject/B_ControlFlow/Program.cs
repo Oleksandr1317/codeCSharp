@@ -4,7 +4,61 @@ namespace B_ControlFlow{
     class Program{
         static void Main(string[] args)
         {
-            
+        }
+        static void Switch_Case(){
+            int month = int.Parse(Console.ReadLine());
+            string season = string.Empty;
+            switch(month){
+                case 1:
+                case 12:
+                case 2:
+                   season = "winter";
+                   break;
+                case 3:
+                case 4:
+                case 5:
+                   season = "spring";
+                break;
+                case 6:
+                case 7:
+                case 8:
+                   season = "summer";
+                   break;
+                case 9:
+                case 10:
+                case 11:
+                season = "Autumn";
+                break;
+                default:
+                throw new ArgumentException("Unexpected number of mounth");
+            }
+            System.Console.WriteLine(season);
+
+
+            Console.ReadLine();
+            int wedingYears = int.Parse(Console.ReadLine());
+            string name = string.Empty;
+
+            switch (wedingYears)
+            {
+                case 5:
+                name = "Деревяная свадьба";
+                break;
+                case 10:
+                name = "Оловяная свадьба";
+                break;
+                case 15:
+                name = "Хрустальная свадьба";
+                break;
+                case 20:
+                name = "Форфоровая свадьба";
+                break;
+                default:
+                name = "Не знаем такого юбилея!";
+                break;
+                
+            }
+            System.Console.WriteLine(name);
         }
         static void Continue_Break(){
             int[] numbers3 = {0, 3, 2, 1, 5, 4, 6, 7, 8, 9};
