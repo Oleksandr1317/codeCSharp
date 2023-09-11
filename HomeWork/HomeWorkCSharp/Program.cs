@@ -4,8 +4,105 @@ namespace HomeWorkCSharp{
     class Program{
         static void Main(string[] args)
         {   
+           string login_password = @"johnsilver\qwerty";
+           System.Console.Write("Please enter login/password: ");
+           string input = Console.ReadLine();
+           for (int i = 3; i>0; i--)
+           {
+            if (login_password == input)
+           {
+            System.Console.WriteLine("Enter the System");
+            break;
+           }
+           else if (login_password != input){
+            System.Console.WriteLine($"Login/password is not correct.Please enter again\nYou have {i} attempts remaining");
+            System.Console.Write("Please enter login/password: ");
+            input = Console.ReadLine();
+           }
+           System.Console.WriteLine("The number of available tries have been exceeded");
+           }
         }
         // HomeWork 3 ControleFlow
+        static void Aundefications(){
+            string login_password = @"johnsilver\qwerty";
+           System.Console.Write("Please enter login/password: ");
+           string input = Console.ReadLine();
+           for (int i = 3; i>0; i--)
+           {
+            if (login_password == input)
+           {
+            System.Console.WriteLine("Enter the System");
+            break;
+           }
+           else if (login_password != input){
+            System.Console.WriteLine($"Login/password is not correct.Please enter again\nYou have {i} attempts remaining");
+            System.Console.Write("Please enter login/password: ");
+            input = Console.ReadLine();
+           }
+           System.Console.WriteLine("The number of available tries have been exceeded");
+           }
+        }
+        static void calculate_factorial(){
+            int number;
+           int i = 1;
+           int k = 1;
+           System.Console.WriteLine("Enter factorial number to be calculated: ");
+           number = int.Parse(Console.ReadLine());
+           while (i <= number){
+            k*=i;
+            i++;
+           }
+           System.Console.WriteLine(k);
+        }
+        static void Averange_numbers(){
+            int[] array = new int[10];
+           int count = 0;
+           System.Console.WriteLine("Please enter your positive numbers");
+           while(count < 10){
+            int input = int.Parse(Console.ReadLine());
+            array[count] = input;
+            count++;
+
+            if (input == 0){
+                break;
+            }
+            if (input < 0) {
+                System.Console.WriteLine("Please enter positive number");
+            }
+           }
+           int sum = 0;
+           int add = 0;
+            foreach (int b in array){
+                if (b > 0 && b % 3 == 0){
+                sum += b;
+                add++;
+                }
+            }
+            double average = (double)sum / add;
+            System.Console.WriteLine($"Average value in array : {average}");
+        }
+        static void Fibonacci_numbers(){
+            System.Console.WriteLine("Please enter number of Fibonacci numbers:");
+           int n = int.Parse(Console.ReadLine());
+           if (n<=0){
+            Console.WriteLine("Enter a positive number.");
+            return;
+           }
+           int[] fab = new int[n];
+           fab[0] = 1;
+           if (n>1){
+            fab[1] = 1;
+           }
+           for (int i = 2; i < n; i++)
+           {
+            fab[i] = fab[i -1] + fab[i -2];
+           }
+           System.Console.WriteLine("Generate numbers fibonacci:");
+           foreach (int result in fab)
+           {
+            System.Console.WriteLine(result);
+           }
+        }
         static void finding_the_maximum_value(){
             System.Console.WriteLine("Please enter your first number:");
             int a = int.Parse(Console.ReadLine());
