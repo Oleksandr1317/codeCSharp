@@ -1,0 +1,14 @@
+D:\project\C_CSharpproject\ArrayCollections\bin\Debug\net7.0\ArrayCollections.exe
+D:\project\C_CSharpproject\ArrayCollections\bin\Debug\net7.0\ArrayCollections.deps.json
+D:\project\C_CSharpproject\ArrayCollections\bin\Debug\net7.0\ArrayCollections.runtimeconfig.json
+D:\project\C_CSharpproject\ArrayCollections\bin\Debug\net7.0\ArrayCollections.dll
+D:\project\C_CSharpproject\ArrayCollections\bin\Debug\net7.0\ArrayCollections.pdb
+D:\project\C_CSharpproject\ArrayCollections\obj\Debug\net7.0\ArrayCollections.GeneratedMSBuildEditorConfig.editorconfig
+D:\project\C_CSharpproject\ArrayCollections\obj\Debug\net7.0\ArrayCollections.AssemblyInfoInputs.cache
+D:\project\C_CSharpproject\ArrayCollections\obj\Debug\net7.0\ArrayCollections.AssemblyInfo.cs
+D:\project\C_CSharpproject\ArrayCollections\obj\Debug\net7.0\ArrayCollections.csproj.CoreCompileInputs.cache
+D:\project\C_CSharpproject\ArrayCollections\obj\Debug\net7.0\ArrayCollections.dll
+D:\project\C_CSharpproject\ArrayCollections\obj\Debug\net7.0\refint\ArrayCollections.dll
+D:\project\C_CSharpproject\ArrayCollections\obj\Debug\net7.0\ArrayCollections.pdb
+D:\project\C_CSharpproject\ArrayCollections\obj\Debug\net7.0\ArrayCollections.genruntimeconfig.cache
+D:\project\C_CSharpproject\ArrayCollections\obj\Debug\net7.0\ref\ArrayCollections.dll
