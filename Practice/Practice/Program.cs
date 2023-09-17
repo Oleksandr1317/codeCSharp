@@ -1,12 +1,41 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Security.Cryptography.X509Certificates;
 
 namespace Practice
 {
     class Program{
         static void Main(string[] args){
-            
+        }
+        static void Practice_Day3(){
+            int input;
+            int result = 1;
+            System.Console.Write("Enter number: ");
+            input = int.Parse(Console.ReadLine());
+            if (input == 0){
+                result = 1;
+            }
+            else if (input < 0){
+                System.Console.WriteLine("Please enter positive number");
+                input = int.Parse(Console.ReadLine());
+            } else {
+            for(int i = 1;i <= input;i++){
+                result *= i;
+            }
+            System.Console.WriteLine(result);
+            }
+            System.Console.WriteLine();
+            var intList = new List<int> {1,2,3,4,5,6};
+            int result1 = 0;
+            for(int i = 0;i < intList.Count;i++){
+                result += intList[i];
+            } 
+            System.Console.WriteLine(result1);
+            System.Console.WriteLine();
+            string[] name = new string[] {"John","Anna","Anatolii","Bob","Carl","Leam"};
+            Array.Sort(name);
+            System.Console.WriteLine(String.Join(",",name));
         }
         static void Practice_day2(){
             double a,b,division;
@@ -40,6 +69,23 @@ namespace Practice
             DayOfWeek dayofweek = birhday.DayOfWeek;
             System.Console.WriteLine($"You were born on a {dayofweek}");
             System.Console.WriteLine();
+            int a1 = 0;
+            System.Console.Write("Please enter your password: ");
+            string password = Console.ReadLine();
+            System.Console.Write("Please enter your password again: ");
+            string password1 = Console.ReadLine();
+            while (a1 < 5)
+            {
+                if(password == password1) {
+                    System.Console.WriteLine("Welcome!");
+                    break;
+                }
+                else {
+                    System.Console.WriteLine("Passwords do not match, please enter again");
+                    password1 = Console.ReadLine();
+                    a1++;
+                }
+            }
         }
         static void Practice_day1(){
             int myNumber = 45;
