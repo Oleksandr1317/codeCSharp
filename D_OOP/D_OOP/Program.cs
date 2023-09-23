@@ -9,9 +9,14 @@ namespace D_OOP
     {
         static void Main(string[] args)
         {
-            Class1 calc = new Class1();
-            calc.CalcSquare(10, 20, 30);
-            calc.CalcSquare(ac: 10,ab: 20,bc: 30);
+            Character c1 = new Character();
+            Character c2 = new Character();
+            Console.WriteLine($"c1.Speed = {c1.PrintSpeed()}. c2.Speed = {c2.PrintSpeed()}");
+            c1.IncreaseSpeed();
+            Console.WriteLine($"c1.Speed = {c1.PrintSpeed()}. c2.Speed = {c2.PrintSpeed()}");
+
+            //double result = Calculator.Average2(1, 2, 3);
+            //Console.WriteLine(result);
         }
     }
 }
