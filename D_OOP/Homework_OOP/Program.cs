@@ -1,18 +1,22 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 
-namespace Homework_OOP
+namespace D_OOP
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Square square = new Square();
-            double sq = square.CalcSquare(3.1, 3, 20);
-            double sq1 = square.CalcSquare(3.1, 3.2, 2.2);
-            Console.WriteLine(sq);
-            Console.WriteLine(sq1);
+            Character c1 = new Character();
+            Character c2 = new Character();
+            Console.WriteLine($"c1.Speed = {c1.PrintSpeed()}. c2.Speed = {c2.PrintSpeed()}");
+            c1.IncreaseSpeed();
+            Console.WriteLine($"c1.Speed = {c1.PrintSpeed()}. c2.Speed = {c2.PrintSpeed()}");
+
+            //double result = Calculator.Average2(1, 2, 3);
+            //Console.WriteLine(result);
         }
     }
 }
