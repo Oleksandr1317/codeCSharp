@@ -1,0 +1,14 @@
+C:\Users\User\Desktop\folder\C# Project\D_OOP\Homework_OOP\bin\Debug\net6.0\Homework_OOP.exe
+C:\Users\User\Desktop\folder\C# Project\D_OOP\Homework_OOP\bin\Debug\net6.0\Homework_OOP.deps.json
+C:\Users\User\Desktop\folder\C# Project\D_OOP\Homework_OOP\bin\Debug\net6.0\Homework_OOP.runtimeconfig.json
+C:\Users\User\Desktop\folder\C# Project\D_OOP\Homework_OOP\bin\Debug\net6.0\Homework_OOP.dll
+C:\Users\User\Desktop\folder\C# Project\D_OOP\Homework_OOP\bin\Debug\net6.0\Homework_OOP.pdb
+C:\Users\User\Desktop\folder\C# Project\D_OOP\Homework_OOP\obj\Debug\net6.0\Homework_OOP.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\Desktop\folder\C# Project\D_OOP\Homework_OOP\obj\Debug\net6.0\Homework_OOP.AssemblyInfoInputs.cache
+C:\Users\User\Desktop\folder\C# Project\D_OOP\Homework_OOP\obj\Debug\net6.0\Homework_OOP.AssemblyInfo.cs
+C:\Users\User\Desktop\folder\C# Project\D_OOP\Homework_OOP\obj\Debug\net6.0\Homework_OOP.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\folder\C# Project\D_OOP\Homework_OOP\obj\Debug\net6.0\Homework_OOP.dll
+C:\Users\User\Desktop\folder\C# Project\D_OOP\Homework_OOP\obj\Debug\net6.0\refint\Homework_OOP.dll
+C:\Users\User\Desktop\folder\C# Project\D_OOP\Homework_OOP\obj\Debug\net6.0\Homework_OOP.pdb
+C:\Users\User\Desktop\folder\C# Project\D_OOP\Homework_OOP\obj\Debug\net6.0\Homework_OOP.genruntimeconfig.cache
+C:\Users\User\Desktop\folder\C# Project\D_OOP\Homework_OOP\obj\Debug\net6.0\ref\Homework_OOP.dll
