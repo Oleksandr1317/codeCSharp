@@ -1,0 +1,14 @@
+C:\Users\User\Desktop\folder\C# Project\Homework_3\X_and_O\bin\Debug\net6.0\X_and_O.exe
+C:\Users\User\Desktop\folder\C# Project\Homework_3\X_and_O\bin\Debug\net6.0\X_and_O.deps.json
+C:\Users\User\Desktop\folder\C# Project\Homework_3\X_and_O\bin\Debug\net6.0\X_and_O.runtimeconfig.json
+C:\Users\User\Desktop\folder\C# Project\Homework_3\X_and_O\bin\Debug\net6.0\X_and_O.dll
+C:\Users\User\Desktop\folder\C# Project\Homework_3\X_and_O\bin\Debug\net6.0\X_and_O.pdb
+C:\Users\User\Desktop\folder\C# Project\Homework_3\X_and_O\obj\Debug\net6.0\X_and_O.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\Desktop\folder\C# Project\Homework_3\X_and_O\obj\Debug\net6.0\X_and_O.AssemblyInfoInputs.cache
+C:\Users\User\Desktop\folder\C# Project\Homework_3\X_and_O\obj\Debug\net6.0\X_and_O.AssemblyInfo.cs
+C:\Users\User\Desktop\folder\C# Project\Homework_3\X_and_O\obj\Debug\net6.0\X_and_O.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\folder\C# Project\Homework_3\X_and_O\obj\Debug\net6.0\X_and_O.dll
+C:\Users\User\Desktop\folder\C# Project\Homework_3\X_and_O\obj\Debug\net6.0\refint\X_and_O.dll
+C:\Users\User\Desktop\folder\C# Project\Homework_3\X_and_O\obj\Debug\net6.0\X_and_O.pdb
+C:\Users\User\Desktop\folder\C# Project\Homework_3\X_and_O\obj\Debug\net6.0\X_and_O.genruntimeconfig.cache
+C:\Users\User\Desktop\folder\C# Project\Homework_3\X_and_O\obj\Debug\net6.0\ref\X_and_O.dll
