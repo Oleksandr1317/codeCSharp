@@ -5,7 +5,9 @@ VisualStudioVersion = 17.7.34031.279
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Homework_3", "Homework_3\Homework_3.csproj", "{81E6B6D6-17D0-4E47-9F75-192F587DEDD9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "guess_number", "guess_number\guess_number.csproj", "{FEA8E37E-ECA7-45A1-8228-76B4D3739017}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "guess_number", "guess_number\guess_number.csproj", "{FEA8E37E-ECA7-45A1-8228-76B4D3739017}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "X_and_O", "X_and_O\X_and_O.csproj", "{52740111-28B6-46E4-8BBB-9E762761CB10}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{FEA8E37E-ECA7-45A1-8228-76B4D3739017}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FEA8E37E-ECA7-45A1-8228-76B4D3739017}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FEA8E37E-ECA7-45A1-8228-76B4D3739017}.Release|Any CPU.Build.0 = Release|Any CPU
+		{52740111-28B6-46E4-8BBB-9E762761CB10}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52740111-28B6-46E4-8BBB-9E762761CB10}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52740111-28B6-46E4-8BBB-9E762761CB10}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52740111-28B6-46E4-8BBB-9E762761CB10}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
