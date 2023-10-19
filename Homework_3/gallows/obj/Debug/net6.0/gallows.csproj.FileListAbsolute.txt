@@ -1,0 +1,14 @@
+C:\Users\User\Desktop\folder\C# Project\Homework_3\gallows\bin\Debug\net6.0\gallows.exe
+C:\Users\User\Desktop\folder\C# Project\Homework_3\gallows\bin\Debug\net6.0\gallows.deps.json
+C:\Users\User\Desktop\folder\C# Project\Homework_3\gallows\bin\Debug\net6.0\gallows.runtimeconfig.json
+C:\Users\User\Desktop\folder\C# Project\Homework_3\gallows\bin\Debug\net6.0\gallows.dll
+C:\Users\User\Desktop\folder\C# Project\Homework_3\gallows\bin\Debug\net6.0\gallows.pdb
+C:\Users\User\Desktop\folder\C# Project\Homework_3\gallows\obj\Debug\net6.0\gallows.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\Desktop\folder\C# Project\Homework_3\gallows\obj\Debug\net6.0\gallows.AssemblyInfoInputs.cache
+C:\Users\User\Desktop\folder\C# Project\Homework_3\gallows\obj\Debug\net6.0\gallows.AssemblyInfo.cs
+C:\Users\User\Desktop\folder\C# Project\Homework_3\gallows\obj\Debug\net6.0\gallows.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\folder\C# Project\Homework_3\gallows\obj\Debug\net6.0\gallows.dll
+C:\Users\User\Desktop\folder\C# Project\Homework_3\gallows\obj\Debug\net6.0\refint\gallows.dll
+C:\Users\User\Desktop\folder\C# Project\Homework_3\gallows\obj\Debug\net6.0\gallows.pdb
+C:\Users\User\Desktop\folder\C# Project\Homework_3\gallows\obj\Debug\net6.0\gallows.genruntimeconfig.cache
+C:\Users\User\Desktop\folder\C# Project\Homework_3\gallows\obj\Debug\net6.0\ref\gallows.dll
